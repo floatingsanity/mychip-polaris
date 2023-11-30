@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,21 +8,43 @@
   <base href="/">
 
   <style>
-    html,
-    body {
+   
+
+   body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120vh;
+      font-size: 17px;
+      font-weight: 700;
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
     }
+
+    .article-tags-module--container {
+      display: flex;
+      margin-bottom: 240px;
+      margin-left: -1000px
+    }
+
   </style>
+
   <title>mychip-polaris</title>
 </head>
 
 <body>
-  <mychip-polaris></mychip-polaris>
+  <mychip-polaris header=""></mychip-polaris>
+
+  <section class="article-tags-module--outer--f7e0f">
+    <div class="article-tags-module--container">
+      <h3 class="article-tags-module--title--85615">TAGS</h3>
+      <ul class="article-tags-module--list--a63cc">
+
+    </ul>
+  </section>
 
   <script type="module" src="./src/mychip-polaris.js"></script>
 </body>
 
 </html>
+
+

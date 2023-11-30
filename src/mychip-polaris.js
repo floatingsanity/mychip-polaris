@@ -1,7 +1,5 @@
 import { LitElement, html, css } from 'lit';
 
-const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
-
 class MychipPolaris extends LitElement {
   static properties = {
     header: { type: String },
@@ -9,80 +7,62 @@ class MychipPolaris extends LitElement {
 
   static styles = css`
     :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
+      display: block;
+    }
+    .tag-module--tag--d9ee2 {
+      text-decoration: none;
+      color: #001e44;
+      border: 2px solid #444;
+      display: inline-block;
+      font-family: Roboto, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 19px;
       text-align: center;
-      background-color: var(--mychip-polaris-background-color);
+      padding: 13px;
+      margin: 5px;
+      transition: background-color 0.3s, color 0.3s, text-decoration 0.3s, border 0.3s;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      box-sizing: inherit;
+      text-transform: uppercase;
+    }
+    .tag-module--tag--d9ee2:hover {
+      background-color: #f0f0f0;
+      color: #0052be;
+      text-decoration: underline;
+      border: 2px solid transparent;
     }
 
-    main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
+    .tag-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-left: 70px
     }
   `;
 
-  constructor() {
-    super();
-    this.header = 'My app';
-  }
-
   render() {
     return html`
-      <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
-
-        <p>Edit <code>src/MychipPolaris.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+      <span>${this.header}</span>
+      <div class="tag-container">
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/academics/">Academics</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/students/">Students</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/visitors-and-neighbors/">Visitors and Neighbors</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/faculty-and-staff/">Faculty and Staff</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/business-and-industry/">Business and Industry</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/alumni/">Alumni</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/university-park/">University Park</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/latest-news/">Latest News</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/academics/rankings/">Rankings</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/impact/">Impact</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/impact/global/">Global</a>
+        <a class="tag-module--tag--d9ee2" href="https://www.psu.edu/news/global-programs/">Global Programs</a>
+      </div>
     `;
   }
 }
 
 customElements.define('mychip-polaris', MychipPolaris);
+
