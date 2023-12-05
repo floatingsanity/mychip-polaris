@@ -8,9 +8,7 @@
   <base href="/">
 
   <style>
-   
-
-   body {
+    body {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -21,10 +19,17 @@
     }
 
     .article-tags-module--container {
-      display: flex;
-      margin-bottom: 240px;
-      margin-left: -1000px
-    }
+  display: flex;
+  margin-bottom: 240px;
+  margin-left: 0; 
+}
+
+.tag-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-left: 70px;
+}
 
   </style>
 
@@ -32,19 +37,30 @@
 </head>
 
 <body>
-  <mychip-polaris header=""></mychip-polaris>
-
   <section class="article-tags-module--outer--f7e0f">
     <div class="article-tags-module--container">
       <h3 class="article-tags-module--title--85615">TAGS</h3>
       <ul class="article-tags-module--list--a63cc">
-
-    </ul>
+  
+      </ul>
+    </div>
   </section>
+  <div class="tag-container">
+  <mychip-polaris name="Academics" link="https://www.psu.edu/news/academics/"></mychip-polaris>
+  <mychip-polaris name="Students" link="https://www.psu.edu/news/students/"></mychip-polaris>
+  <mychip-polaris name="Visitors and Neighbors" link="https://www.psu.edu/news/visitors-and-neighbors/"></mychip-polaris>
+  <mychip-polaris name="Faculty and Staff" link="https://www.psu.edu/news/faculty-and-staff/"></mychip-polaris>
+  <mychip-polaris name="Business and Industry" link="https://www.psu.edu/news/business-and-industry/"></mychip-polaris>
+  <mychip-polaris name="Alumni" link="https://www.psu.edu/news/alumni/"></mychip-polaris>
+  <mychip-polaris name="University Park" link="https://www.psu.edu/news/university-park/"></mychip-polaris>
+  <mychip-polaris name="Latest News" link="https://www.psu.edu/news/latest-news/"></mychip-polaris>
+  <mychip-polaris name="Rankings" link="https://www.psu.edu/news/academics/rankings/"></mychip-polaris>
+  <mychip-polaris name="Impact" link="https://www.psu.edu/news/impact/"></mychip-polaris>
+  <mychip-polaris name="Global" link="https://www.psu.edu/news/impact/global/"></mychip-polaris>
+  <mychip-polaris name="Global Programs" link="https://www.psu.edu/news/global-programs/"></mychip-polaris>
 
   <script type="module" src="./src/mychip-polaris.js"></script>
 </body>
 
 </html>
-
 
